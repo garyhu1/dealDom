@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body html{
+	width: 100%;
+	height: 100%;
+}
+/*给按钮添加样式*/
+button{
+	height: 40px;
+	background: none;
+	background: darkgoldenrod;
+	color: #FFF;
+	padding: 5px 10px;
+	border: 1px solid seagreen;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+button:hover{
+	background: skyblue;
+}
+/*设置内容的样式*/

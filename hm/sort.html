@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>排序</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var btn = document.getElementById("sort");
+				var ol = document.getElementById("test-list");
+				btn.onclick = function() {
+					var arr = [];
+					for(var i = 0;i < ol.children.length;i++){
+						var c = ol.children[i];
+						arr.push(c.innerHTML);
+					}
+					arr.sort(function(s1,s2){
+						var x1 = s1.toUpperCase();
+						var x2 = s2.toUpperCase();
+						if(x1<x2){
+							return -1;
+						}else if(x1>x2){
+							return 1
+						}else{
+							return 0;
+						}
+					});
+					for(var j = 0;j < ol.children.length;j++){
+						var c = ol.children[j];
+						c.innerHTML = arr[j];
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="sort">排序</button>
+		<div>
+			<ol id="test-list">
+				<li class="lang">Scheme</li>
+				<li class="lang">JavaScript</li>
+				<li class="lang">ios</li>
+				<li class="lang">Python</li>
+				<li class="lang">Ruby</li>
+				<li class="lang">android</li>
+				<li class="lang">Haskell</li>
+			</ol>
+		</div>
+	</body>
+
+</html>
